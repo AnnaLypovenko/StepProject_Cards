@@ -1,0 +1,7 @@
+
+const validationRules = {
+    email: /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/,
+    password: /111111/,
+};
+
+export default validationRules;

@@ -1,0 +1,221 @@
+@import "reset.css";
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.btn-style {
+    width: 170px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn-enter {
+    background-color: #fbe11e;
+    color: #0a4bbb;
+}
+
+.btn-enter:hover {
+    background-color: #edd100;
+    cursor: pointer;
+}
+
+.visit-filter {
+    margin-bottom: 2rem;
+    width: 100%;
+    position: relative;
+}
+
+.input-style {
+    width: 200px;
+    height: 30px;
+    transition: 0.3s;
+    border: 1px solid #0a4bbb;
+    border-radius: 5px;
+}
+
+.input-style:focus {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.21)
+}
+
+.search-icon {
+    position: absolute;
+    top: 8px;
+    left: 180px;
+}
+
+.search-btn {
+    width: 100px;
+    height: 30px;
+    transition: 0.3s;
+    border: 1px solid #0a4bbb;
+    border-radius: 5px;
+    color: #0a4bbb;
+    font-weight: bold;
+}
+
+.search-btn:hover {
+    background-color: #fbe11e;
+}
+
+.visit-list {
+    display: flex;
+    height: 70vh;
+    border: 2px solid #0a4bbb;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/*Модальное окно ВХОД*/
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 200ms ease-in;
+    pointer-events: none;
+    margin: 0;
+    padding: 0;
+    z-index: 100;
+}
+
+.modal:target {
+    opacity: 1;
+    pointer-events: auto;
+    overflow-y: auto;
+}
+
+.modal-dialog {
+
+    position: relative;
+    width: 500px;
+    margin: 200px 600px ;
+}
+
+.modal-content {
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 8px;
+    outline: 0;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #eceeef;
+}
+.modal-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 20px;
+    font-weight: 500;
+}
+.close {
+    float: right;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    text-decoration: none;
+}
+.close:focus, .close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .75;
+}
+.modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 15px;
+    overflow: auto;
+}
+/*.email, .pass {*/
+/*    margin:20px;*/
+/*}*/
+.modal-form {
+    text-align: center;
+}
+.column {
+    border: 1px solid black;
+    padding : 10px;
+    margin: 10px;
+}
+.pass {
+    margin: 20px;
+}
+/*карточки для создания визита*/
+.doctor-card {
+    margin: 10px;
+    font-family: sans-serif;
+    padding: 9px;
+    border: 2px solid blue;
+    border-radius: 5px;
+    width: 300px;
+    height: 200px;
+}
+.card-header {
+    background-color: #e0e0e0;
+    text-align:  right;
+}
+.card-header-chosen {
+    padding: 7px;
+    text-align: center;
+}
+.card-open-button {
+    align-content: center;
+    margin-top: 20px;
+}
+.icon-button {
+    display: inline-block;
+    padding: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: blue;
+
+}
+.card-options {
+    text-align: right;
+}
+.visit-description {
+    height: 300px;
+}
+.comment {
+    rows: 4;
+    cols: 40
+}

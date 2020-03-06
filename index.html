@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cards</title>
+    <script src="https://kit.fontawesome.com/85e89ec93b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+<div class="container">
+    <header>
+        <a href="#" class="logo"><img src="img/logo.png" alt="logo"/></a>
+        <a href="#openModal">
+            <button id="loginButton" class="btn-style btn-enter">Вход</button>
+        </a>
+    </header>
+
+    <div id="openModal" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Добро пожаловать!</h3>
+                    <a href="#close" title="Close" class="close">×</a>
+                </div>
+                <div class="modal-body">
+                    <form class="modal-form">
+                        <div class="email"><label>Ваш email </label><input type="email"></div>
+                        <div class="pass"><label> Ваш пароль </label><input type="password"></div>
+                        <button type="submit">Вход</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button id="doctor-card">add test</button>
+    <section class="visit-filter">
+        <form>
+            <input class="input-style" type="text" placeholder="поиск по заголовку">
+            <i class="search-icon fas fa-search"></i>
+            <select class="status input-style">
+                <option disabled selected>выбрать статус</option>
+                <option value="open">ожидает</option>
+                <option value="done">выполнен</option>
+            </select>
+            <select class="priority input-style">
+                <option disabled selected>выбрать приоритет</option>
+                <option value="high">высокий</option>
+                <option value="normal">нормальный</option>
+                <option value="low">низкий</option>
+            </select>
+            <button class="search-btn" type="submit">поиск</button>
+        </form>
+    </section>
+
+    <div id="main-visit-list" class="visit-list">
+        <div class="doctor-card">
+            <div class="card-header">
+                <button id="open-card-menu" class="icon-button"><i class="fas fa-chevron-down tick"></i></button>
+            </div>
+            <div class="card-options">
+                <button id="finish-card" class="icon-button"><i class="fas fa-power-off"></i></button>
+                <button id="edit-card" class="icon-button"><i class="fas fa-edit"></i></button>
+                <button id="close-card" class="icon-button"><i class="fas fa-times"></i></button>
+            </div>
+            <hr>
+            <div class="card-content">
+                <div class="card-heading">Терапевт
+                </div>
+                <button class="card-open-button">Показать больше</button>
+                <button class="card-close-button">Скрыть инфо</button>
+                <div class="card-info"></div>
+            </div>
+        </div>
+
+        <div class="doctor-card visit-description">
+            <div class="card-header">
+                <p class="card-header-chosen">Терапевт</p>
+            </div>
+            <hr>
+            <div class="card-content">
+                <div class="card-heading">
+                    <p>Имя, Фамилия из сервера</p>
+                </div>
+                <br>
+                <div>
+                    <p>ДАТА из сервера</p>
+                </div>
+                <br>
+                <div>
+                    <label>Цель визита из сервера</label>
+                    <input type="text">
+                </div>
+                <br>
+                <div>
+                    <label>Комментарий</label>
+                    <p><textarea class="comment" placeholder="Комментарий/Ваши жалобы" rows="4" cols="28"></textarea>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    <!--        <div id="card-container">-->
+    <!--            -->
+    <!--        </div>-->
+</div>
+
+
+<script type="module" src="script/main.js"></script>
+</body>
+</html>
